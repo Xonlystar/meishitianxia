@@ -1,0 +1,750 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Delicious</title>
+  <link rel="stylesheet" href="meishi.css">
+  <link rel="stylesheet" href="css/denglu.css">
+   
+ 
+ </head>
+ <body>
+ <div id="all">
+ <!--head部分-->
+  <header id="top">
+	<div id="top_main">
+		<ul class="top_box1">
+			<li class="top_logo"></li>
+			<li>首页</li>
+			<li class="cp">菜谱
+				
+				<ul class="cp_box">
+					<li class="z" id="z">中餐
+						<ul id="zc">
+							<li>番茄炒蛋</li>
+							<li>糖醋里脊</li>
+							<li>清蒸鲈鱼</li>
+						</ul>
+					</li>
+					<li class="x" id="x">西餐
+						<ul id="xc">
+							<li>炸鸡</li>
+							<li>披萨</li>
+							<li>汉堡</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			
+			<li><div class="i"><i></i></div>食材</li>
+			<li>珍选</li>
+			<li>健康</li>
+			<li>专题</li>
+			<li>社区</li>
+			<li>话题</li>
+			<li>搜索</li>
+		</ul>
+		
+		<ul class="top_denglu" style="color:#ccc">
+			
+			
+			<li id='welcome'>您好，欢迎来到美食天下！<a href="#" id='login'>登录</a> 
+				<a href="regist.html" target='_blank'>注册</a></li> 
+			<li class="qq_denglu"><i></i><span>QQ登录</span></li>
+
+		</ul>
+		
+		
+
+
+				 <!--模态登录对话框-->
+		  <div class="modal" id="modal" >
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<h4>用户登录</h4>
+				<p class="alert">
+				  请在此处输入您的注册信息。
+				</p>
+				<form id="login-form">
+				  <input type="text" placeholder="请输入登录用户名" name="username" value="weifang">
+				  <input type="password" placeholder="请输入登录密码" name="password" value="123456">
+				  <input type="button" value="提交登录信息" id="bt-login">  
+				</form>
+			  </div>
+			</div>
+		  </div>
+		
+
+
+
+	</div>
+	<!--白背景部分-->
+	<div id="top_box2">
+		<ul>
+			<li class="lv"> <img src="images/weiwei.png" width="20px"height="20px";>发布</li>
+			<li class="cheng"><img src="images/weiwei2.png" width="20px"height="20px";>签到有礼</li>
+			<li class="hong"><img src="images/weiwei3.png" width="20px"height="20px";>客户端</li>
+		</ul>
+	</div>
+  </header>
+  <!--第一部分-->
+  <section id="section1">
+	<div id="first">
+		<img src="images/logo.png" >
+		<div class="say">说出你的使用感受<span>（体验）</span>
+		</div>
+		<div class="search">
+			<input></input>			
+		</div>
+	<!--红条部分-->
+		<div class="tiao">
+			<div class="biao1">
+				<ul>
+					<li class="first_page">
+					<a href="">首页</a>
+					</li>
+					<li><a href="">菜谱</a></li>
+					<li><a href="">食材</a></li>
+					<li><a href="">日志</a></li>
+					<li><a href="">话题</a></li>
+					<li><a href="">健康</a></li>
+					<li><a href="">魔方</a></li>
+					<li><a href="">活动</a></li>
+				</ul>
+			</div>
+			<div class="biao2">
+				<ul>
+					<li><a href="">妈妈派</a></li>
+					<li><a href="">烘焙</a></li>
+					<li><a href="">体验</a></li>
+				</ul>
+			</div>
+		</div>
+		
+	<!--大图片部分-->
+		<div id="san">
+			<ul>
+				<li>
+					<h3>菜谱大全</h3>
+					<a href="">分类</a> 
+					<a href="">热菜</a>
+					<a href="">凉菜</a>
+					<a href="" class="sanzhu">主食</a>
+				</li>
+				<li>
+					<h3>食材大全</h3>
+					<a href="">茄子</a> 
+					<a href="">土豆</a>
+					<a href="">排骨</a>
+					<a href="" class="sanzhu">营养</a>
+				</li>
+				<li>
+					<h3>饮食健康</h3>
+					<a href="">常识</a> 
+					<a href="">瘦身</a>
+					<a href="">母婴</a>
+					<a href="" class="sanzhu">食疗</a>
+				</li>
+				<li>
+					<h3>专区/专题</h3>
+					<a href="">烘焙</a> 
+					<a href="">小吃</a>
+					<a href="">选肉</a>
+					<a href="" class="sanzhu">挑菜</a>
+				</li>
+				<li class="san_last">
+					<h3>特别推荐</h3>
+					<a href="">防诈骗</a> 
+					<a href=""> <span>年夜饭</span></a>
+					<a href="" class="sanzhu">家常菜</a>
+					
+				</li>
+			</ul>
+			
+			<div id="slider">
+				<ul id="imgs">
+				</ul>
+				<ul id="indexs">
+				</ul>
+			</div>
+			<div class="san3">
+				<dl>
+					<dt class="red1">“酿”出绝佳好滋味</dt>
+					<dd>酿菜的做法，客家菜中尤为常见，各地酿菜风味皆具特色，几乎无菜不可酿，无菜不可入酿…</dd>
+				</dl>
+				<dl>
+					<dt class="red1">夏日消暑甜品攻略</dt>
+					<dd>夏天大家都会喜欢吃一些冰凉的食物，感觉特别放松。但是想吃美味又不想出门该怎么办捏？…</dd>
+				</dl>
+				<dl>
+					<dt>夏季多吃这十种食物，提高免疫力</dt>
+					<dd>增强免疫力是预防疾病，提高身体素质的根本噢…</dd>
+				</dl>
+				<dl>
+					<dt>红烧家族，先学哪一个？</dt>
+					<dd>红烧肉|红烧猪蹄|红烧鱼|红烧排骨|红烧茄子</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+  </section>
+  <section id="section2">
+	<div id="head1">
+		<a>美食魔方</a>
+	</div>
+	
+	
+
+
+
+	<div id="preview">
+	
+		<i class="backward_disabled"></i>
+		<i class="forward"></i>
+		<ul id="icon_list" style='position:relative'>
+			<li><img src="images/mangguo.jpg" /></li>
+			<li><img src="images/mianbao.jpg" /></li>
+			<li><img src="images/rourou.jpg" /></li>
+			<li><img src="images/rousi.jpg" /></li>
+			<li><img src="images/lajiao.jpg" /></li>
+			<li><img src="images/001.jpg" /></li>
+			<li><img src="images/002.jpg" /></li>
+			<li><img src="images/005.jpg" /></li>
+		</ul>
+	
+	</div>
+
+
+
+
+
+  </section>
+  <!--第三部分-->
+  <section id="section3">
+	<div id="left">
+		<ul class="head22">
+			<li class="hp">烘焙</li>
+			<li>课堂</li>
+			<li>用品</li>
+			<li>食谱</li>
+			<li>圈子</li>
+		</ul>
+		<div class="aca1"> 
+			<img src="images/t1.jpg">
+			<div class="gui">
+			<p>ACA硅胶精美模具（随机四款）</p>
+			<button>我想买</button>
+			</div>
+		</div>
+		<div class="aca2"> 
+			<img src="images/50.jpg">
+			<div class="gui">
+			<p>ACA天猫官方旗舰店￥50元无门槛消费券</p>
+			<button>我想买</button>
+			</div>
+		</div>
+		<table id="table">
+			<tr>
+				<td ><img src="images/e5.jpg" >
+				<a href="">[知识贴] 新手如何挑选烤箱</a></td>
+				<td><img src="images/e6.jpg" >
+				<a href="">[趣味] 童年记忆 多啦A梦最爱的铜锣烧</a></td>
+			</tr>
+			<tr>
+				<td><img src="images/e7.jpg" >
+				<a href="">[技术贴] 面包保存方法和保存期</a></td>
+				<td><img src="images/e8.jpg" >
+				<a href="">[健康] 超甜可口营养丰富的奶酪蓝莓挞</a></td>
+			</tr>
+			<tr>
+				<td><img src="images/e9.jpg" >
+				<a href="">[惬意] 阳光、爱人、早餐享受美好时光</a></td>
+				<td><img src="images/e11.jpg" >
+				<a href="">[健康] 蔬菜做饼干 好玩又营养</a></td>
+			</tr>
+			<tr>
+				<td><img src="images/e13.jpg" >
+				<a href="">[意趣] “小老鼠”上披萨偷吃</a></td>
+				<td><img src="images/h1.jpg" >
+				<a href="">[情感] 父爱节蛋糕 父爱藏于细节</a></td>
+			</tr>
+		</table>
+		<ul id="tutu">
+			<li><img src="images/a2.jpg" >面包</li>
+			<li><img src="images/c1.jpg" >饼干</li>
+			<li><img src="images/xiaodangao.jpg" >蛋糕</li>
+			<li><img src="images/pisa.jpg" >披萨</li>
+			<li><img src="images/d4.jpg" >三明治</li>
+			<li><img src="images/d5.jpg" >中式糕点</li>
+			<li><img src="images/h3.jpg" >马卡龙</li>
+			<li><img src="images/h2.jpg" >蛋挞</li>
+		</ul>
+	</div>
+	<!--第三块的右边部分-->
+	<div id="right">
+		<div class="head23">
+			<a href="">为你推荐</a>
+		</div>
+		<ul class="bld">
+			<li><img src="images/a4.jpg" >早餐</li>
+			<li><img src="images/a5.jpg" >快手菜</li>
+			<li><img src="images/a7.jpg" >夏季食谱</li>
+		</ul>
+		<table >
+			<tr>
+				<td><a href="">家常菜</a></td>
+				<td><a href="">汤羹</a></td>
+				<td><a href="">泡酱腌菜</a></td>
+			</tr>
+			<tr>
+				<td><a href="">红烧肉</a></td>
+				<td><a href="">可乐鸡翅</a></td>
+				<td><a href="">糖醋排骨</a></td>
+			</tr>
+			<tr>
+				<td><a href="">酸菜鱼</a></td>
+				<td><a href="">意大利面</a></td>
+				<td><a href="">鱼香肉丝</a></td>
+			</tr>
+		</table>
+		<ul id="jcc">
+			<li><a href="">12种有毒家常菜</a></li>
+			<li><a href="">米饭你真的吃对了么？</a></li>
+			<li><a href="">别再吃这六种早餐了</a></li>
+			<li><a href="">玉米六大独特营养</a></li>
+			<li><a href="">14种越吃越瘦的食物</a></li>
+			<li><a href="">运动前后应该吃些啥？</a></li>
+		</ul>
+	</div>
+  </section>
+  <!--第四部分-->
+  <section id="section4">
+	<div id="left2">
+		<div class="head24">
+			<a href="">当季 <i></i> 新食材</a>
+		</div>
+		<ul class="ku">
+			<li><img src="images/b6.jpg">苦瓜
+				<p>
+					老干妈炒苦瓜</br>
+					蛋黄焗苦瓜
+				</p>
+			</li>
+			<li><img src="images/b2.jpg">绿豆
+				<p>
+					绿豆沙</br>
+					自制绿豆沙
+				</p>
+			</li>
+			<li><img src="images/b5.jpg">茄子
+				<p>
+					东北地三鲜</br>
+					鱼香茄子煲
+				</p>
+			</li>
+			<li><img src="images/b1.jpg">西红柿
+				<p>
+					芝士焗番茄</br>
+					西红柿炖牛腩
+				</p>
+			</li>
+			<li><img src="images/a8.jpg">丝瓜
+				<p>
+					金银蒜蒸丝瓜</br>
+					蛤蜊丝瓜汤
+				</p>
+			</li>
+			<li class="ku1"><img src="images/a9.jpg">苦瓜
+				<p>
+					爽辣啤酒鸭</br>
+					魔芋烧鸭
+				</p>
+			</li>
+		</ul>
+	</div>
+
+
+
+	<div id="right2">
+		<div class="head25">
+				<a href="">妈妈派</a>
+		</div>
+		<ul class="huaiy">
+			<li>备孕</li>
+			<li>孕早期</li>
+			<li>孕中期</li>
+			<li>孕晚期</li>
+			<li>月子餐</li>
+			<li>哺乳期</li>
+			<li>0-12个月</li>
+			<li>1-3岁</li>
+			<li>调理餐</li>
+			<li>童趣童味</li>
+		</ul>
+		<ul class="yun">
+			<li class="yunyu">备孕</li>
+			<li>孕前三大关键食物</li>
+			<li>高龄女性备孕须知</li>
+		</ul>
+		<ul class="yun">
+			<li class="yunyu">孕期</li>
+			<li>准妈妈补钙铁锌</li>
+			<li>重口味妈妈要当心</li>
+		</ul>
+		<ul class="yun">
+			<li class="yunyu">儿童</li>
+			<li>宝宝预防病从口入</li>
+			<li>孩子春夏如何补锌</li>
+		</ul>
+		<ul class="yun">
+			<li class="yunyu">宝宝</li>
+			<li>轻松搞定宝宝补锌</li>
+			<li>宝宝长牙要吃啥？</li>
+		</ul>
+	</div>
+  </section>
+  <!--第五部分-->
+  <section id="section5">
+	<div id="left3">
+		<div class="head26">
+			<a href="">健康饮食</a>
+		</div>
+		<ul class="ha">
+			<li><img src="images/b8.jpg">消暑防晒 哈密瓜有这些好处</li>
+			<li><img src="images/b7.jpg">细数鸡蛋的五大功效</li>
+			<li class="haha"><img src="images/b9.jpg">改善肤色暗沉的5种蔬果</li>
+		</ul>
+		<ul class="life">
+			<li>
+				<a href="">饱腹丨10种水果让你饱腹感强</a>
+			</li>
+			<li>
+				<a href="">祛痘丨10种水果祛痘效果最好</a>
+			</li>
+			<li>
+				<a href="">消暑丨夏季消暑又养心的食物</a>
+			</li>
+			<li>
+				<a href="">祛湿丨女性必吃的6种祛湿食物</a>
+			</li>
+			<li>
+				<a href="">抗衰丨8种抗衰老食物不容错过</a>
+			</li>
+			<li>
+				<a href="">调理丨女性体寒4种食物巧调解</a>
+			</li>
+			<li>
+				<a href="">解酒丨10种解酒食物不可缺少</a>
+			</li>
+			<li>
+				<a href="">补肝丨补肝益肾夏季养生多吃鱼</a>
+			</li>
+			<li>
+				<a href="">降火丨5大水果降温清火效果好</a>
+			</li>
+			
+
+		</ul>
+	</div>
+	<div id="right3">
+		<div class="head27">
+			<a href="">活动进行中</a>
+		</div>
+		<div class="pu">
+			<img src="images/a6.jpg" >
+			[菜谱征集]ACA第三届烘焙明星大赛
+			<p>立即参与</p>
+		</div>
+		<div class="pu">
+			<img src="images/b3.jpg" >
+			[免费抽奖]ACA多功能厨师机
+			<p>立即参与</p>
+		</div>
+		<div class="pu">
+			<img src="images/b4.jpg" >
+			[话题活动]晒美食，赢宋仲基同款手机
+			<p>立即参与</p>
+		</div>
+	</div>
+  </section>
+  <!--横条长图-->
+  <div id="changtu">
+	<img src="images/hengtiao.jpg" >
+  </div>
+<!--第六部分-->
+  <section id="section6">
+	<div id="left4">
+		<div class="head28">
+			<a href="">最新推荐菜谱</a>
+		</div>
+
+		<ul class="jiu">
+			<li class="yi">
+				<img src="images/u3.jpg" >
+				<i class="i1"></i>
+				<p>水果彩虹慕斯</p>
+			</li>
+			<li class="er">
+				<img src="images/u2.jpg" >
+				<i class="i2"></i>
+				<p>咸肉菜饭</p>
+			</li>
+			<li class="sans">
+				<img src="images/jitang.jpg" >
+				<i class="i3"></i>
+				<p>砂锅酱烧鸭</p>
+			</li>
+			<li class="si">
+				<img src="images/u1.jpg" >
+				<i class="i8"></i>
+				<p>牛奶蜜豆沙冰</p>
+			</li>
+			<li class="wu">
+				<img src="images/t9.jpg" >
+				<i class="i4"></i>
+				<p>荷叶饼</p>
+			</li>
+			<li class="liu">
+				<img src="images/t8.jpg" >
+				<i class="i5"></i>
+				<p>鲜上加鲜快手靓汤</p>
+			</li>
+			<li class="qi">
+				<img src="images/t7.jpg" >
+				<i class="i6"></i>
+				<p>脆香芝麻核桃酥</p>
+			</li>
+			<li class="ba">
+				<img src="images/t6.jpg" >
+				<i class="i7"></i>
+				<p>蔓越莓肉松夹心蛋糕</p>
+			</li>
+			<li class="jiuj">
+				<img src="images/t5.jpg" >
+				<i class="i9"></i>
+				<p>蔓越莓海绵小蛋糕</p>
+			</li>
+		</ul>
+	</div>
+	<div id="right4">
+		<div class="head29">
+			<a href="">热门话题</a>
+		</div>
+		<ul id="small">
+			<li >
+				<p><img src="images/a3.jpg"></p>
+				<div class="pt">
+					
+					“昨天被美天亲们的饺子馋到了，今天果断保留饺子，只是现在才吃到嘴里，还有亲们没吃的吗？”
+					<img src="images/t4.jpg" >
+					<span>lyke0608 发表于2小时前</span>
+				</div>
+			</li>
+			<li >
+				<p><img src="images/e5.jpg"></p>
+				<div class="pt">
+					
+					“看着小区里的荷叶长得那么好于是又“心动”了。就有了下面的“清香荷叶排骨饭”小家伙吃了两碗。”
+					<img src="images/t3.jpg" >
+					<span>天鹅湖99316 发表于4小时前</span>
+				</div>
+			</li>
+			<li >
+				<p><img src="images/e6.jpg"></p>
+				<div class="pt">
+					
+					“晚饭”
+					<img src="images/t2.jpg" >
+					<span>金凤栖梧 发表于5小时前</span>
+				</div>
+			</li>
+			<li >
+				<p><img src="images/e7.jpg"></p>
+				<div class="pt">
+					
+					“想不想吃？”
+					<img src="images/cui.jpg" >
+					<span>依娜JND 发表于6小时前</span>
+				</div>
+			</li>
+			<li >
+				<p><img src="images/e8.jpg"></p>
+				<div class="pt">
+					“酸汤菜做好了 想学的朋友到优酷里搜（酸汤菜）”
+					<img src="images/suans.jpg" >
+					<span>恐怖天使 发表于6小时前</span>
+				</div>
+			</li>
+			<li class="xm">
+				<p ><img src="images/e11.jpg"></p>
+				<div class="pm">
+					
+					“很喜欢吃烤肉肉串什么的，特别是和好朋友一起，无肉不欢啊！”
+					<img src="images/rc.jpg" >
+					<span>小美 发表于6小时前</span>
+				</div>
+			</li>
+		</ul>
+		
+	</div>
+  </section>
+  <section id="section7">
+	<div id="left5">
+		<div class="head30">
+			<a href="">最新推荐日志</a>
+		</div>
+
+		<ul class="cda">
+			<li class="shi">
+				<img src="images/u3.jpg" >
+				<i class="i10"></i>
+				<p>水果彩虹慕斯</p>
+			</li>
+			<li class="shiyi">
+				<img src="images/t5.jpg" >
+				<i class="i11"></i>
+				<p>蔓越莓海绵小蛋糕</p>
+			</li>
+			<li class="shier">
+				<img src="images/u2.jpg" >
+				<i class="i12"></i>
+				<p>咸肉菜饭</p>
+			</li>
+			<li class="shisan">
+				<img src="images/jitang.jpg" >
+				<i class="i13"></i>
+				<p>砂锅酱烧鸭</p>
+			</li>
+			<li class="shisi">
+				<img src="images/t7.jpg" >
+				<i class="i14"></i>
+				<p>脆香芝麻核桃酥</p>
+			</li>
+			<li class="shiwu">
+				<img src="images/youyu.jpg" >
+				<i class="i15"></i>
+				<p>鱿鱼鲜肉芹菜汤饺子</p>
+			</li>
+			
+		</ul>
+		<table class="ncbc">
+			<tr>
+				<td>
+					<a href="">咸肉长瓜煮粉丝</a> &nbsp;<a href=""> 香辣手撕鸡</a>
+				</td>
+				<td>
+					<a href="">榨菜肉丝汤</a> &nbsp;<a href=""> 枸杞玉米汁</a>
+				</td>
+				<td>
+					<a href="">青椒焖鱼</a> &nbsp;<a href=""> 吐司和冷面</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">红烧土豆</a> &nbsp;<a href=""> 卷心菜鸟巢蛋</a>
+				</td>
+				<td>
+					<a href="">尖椒炒基围虾</a> &nbsp;<a href=""> 咖喱圆白菜粉</a>
+				</td>
+				<td>
+					<a href="">炒槐花不烂子</a> &nbsp;<a href=""> 鸡蛋泡菜波纹面</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </section>
+  <footer id="footer_box">
+	<div id="footer">
+		<div id="main">
+			<ul class="diyi">
+				<li class="blod">关于美天</li>
+				<li>加入我们</li>
+				<li>联系我们</li>
+				<li>网站地图</li>
+				<li>帮助/反馈</li>
+				<li>版权与免费</li>
+			</ul>
+			<ul class="dier">
+				<li class="blod">菜谱大全</li>
+				<li>千道家常菜</li>
+				<li>热菜</li>
+				<li>菜羹</li>
+				<li>儿童菜</li>
+				<li>自制食材</li>
+			</ul>
+			<ul class="disan">
+				<li class="blod"></li>
+				<li>所有分类</li>
+				<li>凉菜</li>
+				<li>小吃</li>
+				<li>开胃菜</li>
+				<li>泡酱腌菜</li>
+			</ul>
+			<ul class="disi">
+				<li class="blod">时下最热</li>
+				<li>荠菜</li>
+				<li>菠菜</li>
+				<li>豆腐</li>
+				<li>鸡蛋</li>
+				<li>韭菜</li>
+			</ul>
+			<ul class="diwu">
+				<li class="blod"></li>
+				<li>火腿风情</li>
+				<li>春季增高</li>
+				<li>减肥狂潮</li>
+				<li>吸烟必吃</li>
+				<li>打卤馕记</li>
+			</ul>
+			<ul class="diliu">
+				<li class="blod"></li>
+				<li>美食电影</li>
+				<li>吃出好气色</li>
+				<li>“菌”临天下</li>
+				<li>排毒宝典</li>
+				<li>苹果婊</li>
+			</ul >
+			<div class="text1">随时随地，美食天下</div>
+			<ul class="sui">
+				<li><img src="images/app_all.png" >iphone客户端</li>
+				<li><img src="images/app_iphone.png" >Android客户端</li>
+				<li><img src="images/weixin2.png" >微信公众号</li>
+			</ul>
+		</div>
+		<div id="ctt">合作伙伴</div>
+		<ul id="cooperation">
+			<li><img src="images/z5.jpg" ></li>
+			<li><img src="images/z3.jpg" ></li>
+			<li><img src="images/z2.jpg" ></li>
+			<li><img src="images/z1.jpg" ></li>
+			<li><img src="images/z4.jpg" ></li>
+			<li><img src="images/z6.jpg" ></li>
+			<li><img src="images/z7.jpg" ></li>
+			<li><img src="images/z8.jpg" ></li>
+			<li><img src="images/e1.jpg" ></li>
+			<li class="zhd"><img src="images/z9.jpg" ></li>
+		</ul>
+		<div id="ctt">友情链接</div>
+		<ul id="wangw">
+		<li>美食天下手机版</li> <li>美食家</li> <li>hao123</li> <li>菜谱</li> <li>爱奇艺生活</li>  <li>糖酒快讯</li> <li>应用汇</li> <li>中华美食网</li> <li>太平洋亲子网</li> <li>名厨网</li> <li>美食杰</li> <li>POCO美食网</li> <li>红餐微杂志</li> <li>百年餐饮网</li> <li>食品商务网</li> <li>妈妈网</li> <li>亲宝网</li> <li>6296网址大全</li> <li>中国地图</li> <li>三九养生堂</li>  <li>饭菜网</li> <li>装修网</li> <li>波奇网</li> <li>糖豆网</li> <li>慧聪网</li> <li>企业服务平台</li>
+		</ul>
+		<div id="xianx"></div>
+		<div id="banquan">版权所有 © 2004-2016 美食天下 保留所有权利 <i></i> 京公网安备 11010502031041号 / 京ICP证090244号 / 京ICP备10020153号</div>
+		<div id="tuh"><img src="images/shenfen.png" ></div>
+	</div>
+  </footer>
+  <div id="fixed">
+	<a href="#"><img src="images/gotop.png" ></a>
+ </div>
+ 
+ </div>
+ <script src="js/jquery-1.11.3.js"></script>
+ <script src="meishitianxia.js"></script>
+ <script src="js/denglu.js"></script>
+ </body>
+</html>
+
+
+
+
+

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>美食天下-个人注册</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link charset="utf-8" rel="stylesheet" href="css/regist.css">
+    <style>
+		#msg {
+		  border: 1px solid #0a0;
+		  background: #efe;
+		  color: #0a0;
+		  padding: 10px;
+		  display: none;
+		}
+    </style>
+	
+</head>
+<body>
+<!-- SDK 登录 -->
+
+<div class="video-frame container" poster="videos/home-hero-video-desktop-still.jpg">
+    <video class="center-block" autoplay loop src="video/birds.mp4"></video>
+</div>
+<div class="content reg-container">
+    <form class="form form-horizontal" action="#">
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="username">用户名:</label>
+            <div class="col-md-5">
+                <input id="username" type="text" class="form-control" autofocus placeholder="请输入用户名" required pattern="^[a-zA-Z0-9]{8,16}$">
+            </div>
+            <label id="usernameTip" class="col-md-5 hide control-default">请输入8至16位的英文或数字.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="password">密码:</label>
+            <div class="col-md-5">
+                <input id="password" type="password" class="form-control" placeholder="请输入密码" required pattern="^[0-9]{6,12}$">
+            </div>
+            <label id="passwordTip" class="col-md-5 hide control-default">请输入6至12位的数字.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="email">电子邮件:</label>
+            <div class="col-md-5">
+                <input id="email" type="email" class="form-control" placeholder="请输入电子邮件" required>
+            </div>
+            <label id="emailTip" class="col-md-5 hide control-default">请输入你的电子邮件地址.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="home">个人主页:</label>
+            <div class="col-md-5">
+                <input id="home" type="url" class="form-control" placeholder="请输入个人主页">
+            </div>
+            <label id="homeTip" class="col-md-5 hide control-default">请输入你的个人主页(该项可忽略).</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="age">年龄:</label>
+            <div class="col-md-5">
+                <input id="age" type="number" class="form-control" placeholder="请输入年龄" required min="18" max="50" step="1">
+            </div>
+            <label id="ageTip" class="col-md-5 hide control-default">请输入你的年龄.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="birth">出生日期:</label>
+            <div class="col-md-5">
+                <input id="birth" type="date" class="form-control" placeholder="请输入出生日期">
+            </div>
+            <label id="birthTip" class="col-md-5 hide control-default">请选择你的出生日期.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input type="submit" value="注册" class="btn btn-success btn-block" id="btSave">
+            </div>
+        </div>
+    </form>
+</div>
+
+<p id="msg">
+    <b>注册成功！<br></b>
+    您在系统中的编号为：<span id="eid">999</span>
+  </p>
+
+
+
+<div class="w">
+    <div id="footer-2013">
+        <div class="links">
+            <a rel="nofollow" target="_blank" href="javascript:return false;">
+                关于我们
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="javascript:return false;">
+                联系我们
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="javascript:return false;">
+                人才招聘
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="javascript:return false;">
+                商家入驻
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="javascript:return false;">
+                广告服务
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="javascript:return false;">
+                手机订餐
+            </a>
+            |
+            <a target="_blank" href="javascript:return false;">
+                友情链接
+            </a>
+            |
+            <a target="_blank" href="javascript:return false;">
+                销售联盟
+            </a>
+            |
+            <a href="javascript:return false;" target="_blank">
+                美食社区
+            </a>
+            |
+            <a href="javascript:return false;" target="_blank">
+                美食公益
+            </a>
+            |
+            <a target="_blank" href="javascript:return false;" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+        </div>
+        <div class="copyright">
+            Copyright&nbsp;&#169;&nbsp;2004-2016&nbsp;&nbsp;美食天下meishitianxia.com&nbsp;版权所有
+        </div>
+    </div>
+</div>
+<script>
+    /*
+		表单验证的需求
+			1.表单获取焦点时,显示输入提示内容
+			2.表单元素失去焦点时,完成表单元素的验证
+				验证失败 - 给出失败的信息
+				验证成功 - 给出成功的信息
+			3.class的说明
+				隐藏和显示的class
+					show
+					hiden
+				表示不同含义的class
+					control-default - 提示信息
+					control-error - 错误信息
+					control-success - 成功信息
+	*/
+	var username = document.getElementById('username');
+	var usernameTip = document.getElementById('usernameTip');
+	//绑定获取焦点事件
+	username.onfocus = function(){
+		//显示默认提示信息
+		usernameTip.className = 'col-md-5 show control-default';
+		//usernameTip.innerHTML='请输入8至16位的英文或数字.';
+	};
+	//绑定失去焦点事件
+	username.onblur = function(){
+		if(username.validity.valid){
+			//表示输入正确
+			usernameTip.className = 'col-md-5 show control-success';
+			usernameTip.innerHTML='用户名输入正确.';
+		}else if(username.validity.valueMissing){
+			//表示值为空
+			usernameTip.className = 'col-md-5 show control-error';
+			usernameTip.innerHTML='用户名不能为空.';
+		}else if(username.validity.patternMismatch){
+			//表示正则不匹配
+			usernameTip.className = 'col-md-5 show control-error';
+			usernameTip.innerHTML='用户名输入错误.';
+		}
+	};
+	
+	var password = document.getElementById("password");
+    var passwordTip = document.getElementById("passwordTip");
+    password.onfocus = function(){
+        passwordTip.className = "col-md-5 show control-default";
+        passwordTip.firstChild.nodeValue = "请输入6至12位的数字."
+    }
+	password.onblur = function(){
+		if(password.validity.valid){
+			passwordTip.className = "col-md-5 show control-success";
+			passwordTip.firstChild.nodeValue = "密码正确."
+		}else if(password.validity.valueMissing){
+			passwordTip.className = "col-md-5 show control-error";
+			passwordTip.firstChild.nodeValue = "密码不能为空."
+		}else if(password.validity.patternMismatch){
+			passwordTip.className = "col-md-5 show control-error";
+			passwordTip.firstChild.nodeValue = "密码输入有误."
+		}
+	}
+	//	var opt = {
+	//		elem : document.getElementById('password'),
+	//		elemTip : document.getElementById('passwordTip'),
+	//		msg : document.getElementById('passwordTip').innerHTML,
+	//		elemText : '密码'
+	//	}
+	//	validityForm(opt);
+
+
+
+	var email = document.getElementById("email");
+	var emailTip = document.getElementById("emailTip");
+	email.onfocus = function(){
+		emailTip.className = "col-md-5 show control-default";
+		emailTip.firstChild.nodeValue = "请输入你的电子邮件地址."
+	}
+	email.onblur = function(){
+		if(email.validity.valid){
+			emailTip.className = "col-md-5 show control-success";
+			emailTip.firstChild.nodeValue = "电子邮件正确."
+		}else if(email.validity.valueMissing){
+			emailTip.className = "col-md-5 show control-error";
+			emailTip.firstChild.nodeValue = "电子邮件不能为空."
+		}else if(email.validity.typeMismatch){
+			emailTip.className = "col-md-5 show control-error";
+			emailTip.firstChild.nodeValue = "电子邮件输入有误."
+		}
+	}
+
+	var home = document.getElementById("home");
+	var homeTip = document.getElementById("homeTip");
+	home.onfocus = function(){
+		homeTip.className = "col-md-5 show control-default";
+		homeTip.firstChild.nodeValue = "请输入你的个人主页(该项可忽略)."
+	}
+	home.onblur = function(){
+		if(home.validity.valid){
+			homeTip.className = "col-md-5 show control-success";
+			homeTip.firstChild.nodeValue = "个人主页正确."
+		}else if(home.validity.valueMissing){					//该项没有写required,所以valueMissing无效
+			homeTip.className = "col-md-5 show control-success";
+			homeTip.firstChild.nodeValue = " ";
+		}else if(home.validity.typeMismatch){
+			homeTip.className = "col-md-5 show control-error";
+			homeTip.firstChild.nodeValue = "个人主页输入有误."
+		}
+	}
+
+	var age = document.getElementById("age");
+	var ageTip = document.getElementById("ageTip");
+	age.onfocus = function(){
+		ageTip.className = "col-md-5 show control-default";
+		ageTip.firstChild.nodeValue = "请输入你的年龄."
+	}
+	age.onblur = function(){
+		if(age.validity.valid){
+			ageTip.className = "col-md-5 show control-success";
+			ageTip.firstChild.nodeValue = "年龄正确."
+		}else if(age.validity.valueMissing){
+			ageTip.className = "col-md-5 show control-error";
+			ageTip.firstChild.nodeValue = "年龄不能为空."
+		}else if(age.validity.rangeUnderflow){
+			ageTip.className = "col-md-5 show control-error";
+			ageTip.firstChild.nodeValue = "年龄太小啦."
+		}else if(age.validity.rangeOverflow){
+			ageTip.className = "col-md-5 show control-error";
+			ageTip.firstChild.nodeValue = "年龄太大啦."
+		}
+	}
+
+	var birth = document.getElementById("birth");
+	var birthTip = document.getElementById("birthTip");
+	birth.onfocus = function(){
+		birthTip.className = "col-md-5 show control-default";
+		birthTip.firstChild.nodeValue = "请选择你的出生日期."
+	}
+	birth.onblur = function(){
+		birthTip.className = "col-md-5 hide";
+	}
+
+	
+
+</script>
+<script src="js/jquery-1.11.3.js"></script>
+<script >
+$('#btSave').click(function(){
+	var n=username.value;
+	var p=password.value;
+	var e=email.value;
+	var h=home.value;
+	var o=age.value;
+	var b=birth.value;
+	 $.post('data/ms_add.php',{username:n,password:p,email:e,home:h,age:o,birth:b}, function(txt){
+      console.log('开始处理响应数据');
+      txt = parseInt(txt);
+      if(txt>0){
+        $('#eid').html(txt);
+        $('#msg').fadeIn(300);
+      }else{
+        alert('注册失败');
+      }
+    });
+});
+</script>
+</body>
+</html>
